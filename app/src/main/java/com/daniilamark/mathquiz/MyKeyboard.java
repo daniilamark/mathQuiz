@@ -12,6 +12,8 @@ import android.widget.LinearLayout;
 
 public class MyKeyboard extends LinearLayout implements View.OnClickListener {
 
+    MathActivity activity = new MathActivity();
+
     // constructors
     public MyKeyboard(Context context) {
         this(context, null, 0);
@@ -38,7 +40,6 @@ public class MyKeyboard extends LinearLayout implements View.OnClickListener {
     private Button mButton9;
     private Button mButton0;
     private Button mButtonDelete;
-    private Button mButtonEnter;
 
     // This will map the button resource id to the String value that we want to
     // input when that button is clicked.
@@ -62,7 +63,7 @@ public class MyKeyboard extends LinearLayout implements View.OnClickListener {
         mButton9 = (Button) findViewById(R.id.button_9);
         mButton0 = (Button) findViewById(R.id.button_0);
         mButtonDelete = (Button) findViewById(R.id.button_delete);
-        mButtonEnter = (Button) findViewById(R.id.button_enter);
+
 
         // set button click listeners
         mButton1.setOnClickListener(this);
@@ -76,7 +77,6 @@ public class MyKeyboard extends LinearLayout implements View.OnClickListener {
         mButton9.setOnClickListener(this);
         mButton0.setOnClickListener(this);
         mButtonDelete.setOnClickListener(this);
-        mButtonEnter.setOnClickListener(this);
 
         // map buttons IDs to input strings
         keyValues.put(R.id.button_1, "1");
@@ -89,7 +89,6 @@ public class MyKeyboard extends LinearLayout implements View.OnClickListener {
         keyValues.put(R.id.button_8, "8");
         keyValues.put(R.id.button_9, "9");
         keyValues.put(R.id.button_0, "0");
-        keyValues.put(R.id.button_enter, "\n");
     }
 
     @Override

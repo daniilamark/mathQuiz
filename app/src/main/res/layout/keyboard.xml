@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:layout_margin="5dp"
-                android:text="Delete"/>
+                android:text="Удалить"/>
 
             <Button
                 android:id="@+id/button_enter"
@@ -119,7 +119,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:layout_margin="5dp"
-                android:text="Enter"/>
+                android:onClick="onButtonClickEnter"
+                android:text="Проверить"/>
+
 
         </LinearLayout>
     </LinearLayout>
