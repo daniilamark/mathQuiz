@@ -69,7 +69,7 @@ public class MathActivity extends AppCompatActivity {
 
     public void setTask() {
         tvCountNum.setText(calc.getStrCount());
-        tvTask.setText(calc.getStrNum1()+" + "+calc.getStrNum2()+" =");
+        tvTask.setText(calc.getStrNum1() + " + " + calc.getStrNum2() + " =");
         editTextResult.setText("");
     }
     public int getIntResult() {

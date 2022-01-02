@@ -2,39 +2,48 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:background="#B7DCC8"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
         android:id="@+id/taskText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Выбери сложность"
-
-        android:textColor="@color/black"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:textSize="32sp"/>
+        android:gravity="center"
+        android:text="Выбери сложность"
+        android:textColor="@color/sea_wave"
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/taskRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/taskText"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:nestedScrollingEnabled="true"/>
-
-    <Button
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/taskText"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="183dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="142dp"
-        android:onClick="onClickGoMath"
-        android:text="ccc" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:onClick="onClickGoMath"
+            android:text="легко"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
